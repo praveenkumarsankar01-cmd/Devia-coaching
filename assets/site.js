@@ -22,6 +22,13 @@
     life: 'Life Coaching'
   };
 
+  var PROGRAMS = {
+    clarity: 'Clarity Session',
+    '90day': '90-Day Coaching',
+    leadership: 'Leadership Program',
+    unsure: 'Not sure yet'
+  };
+
   var KEY_DRAFT = 'devia.draft';
   var KEY_APP = 'devia.application';
   var KEY_BOOKING = 'devia.booking';
@@ -105,6 +112,16 @@
     $$('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); toggle.focus(); } });
     window.addEventListener('resize', function () { if (window.innerWidth > 920 && !menu.hidden) setMenu(false); });
+
+    var clip = $('[data-hero-video]');
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (clip && clip.getAttribute('data-src') && !calm && !saveData) {
+      clip.addEventListener('playing', function () { clip.classList.add('playing'); });
+      clip.src = clip.getAttribute('data-src');
+      var p = clip.play();
+      if (p && p.catch) p.catch(function () {});
+    }
 
     $$('[data-video]').forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -248,8 +265,11 @@
     }
 
     restore(store.get(KEY_DRAFT));
-    var focus = new URLSearchParams(location.search).get('focus');
+    var params = new URLSearchParams(location.search);
+    var focus = params.get('focus');
+    var program = params.get('program');
     if (focus && FOCUS[focus]) restore({ focus: focus });
+    if (program && PROGRAMS[program]) restore({ program: program });
 
     form.addEventListener('input', function () { store.set(KEY_DRAFT, data()); });
     form.addEventListener('change', function () { store.set(KEY_DRAFT, data()); });
@@ -295,6 +315,7 @@
         ['Coaching', FOCUS[d.focus], 1],
         ['Right now', d.stage, 1],
         ['Challenge', d.challenge, 1],
+        ['Program', PROGRAMS[d.program], 2],
         ['90-day goal', d.goal, 2],
         ['Coached before', d.coached, 2],
         ['Commitment', d.commitment + ' / 10', 2],

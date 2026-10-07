@@ -168,6 +168,17 @@
           <textarea class="textarea" id="goal" name="goal" rows="4" maxlength="800" placeholder="Be as specific as you can." required data-min="20" data-msg="Please describe what success would look like."></textarea>
           <p class="err" id="goal-err"></p>
         </div>
+        <fieldset class="field" data-required data-msg="Please choose a program, or pick Not sure yet.">
+          <legend>Which program interests you? <span class="req">*</span></legend>
+          <div class="chips">
+            <label><input type="radio" name="program" value="clarity"><span>Clarity Session</span></label>
+            <label><input type="radio" name="program" value="90day"><span>90-Day Coaching</span></label>
+            <label><input type="radio" name="program" value="leadership"><span>Leadership Program</span></label>
+            <label><input type="radio" name="program" value="unsure"><span>Not sure yet</span></label>
+          </div>
+          <p class="hint"><a href="index.html#programs" target="_blank">Compare programs</a></p>
+          <p class="err"></p>
+        </fieldset>
         <fieldset class="field" data-required data-msg="Please choose one.">
           <legend>Have you worked with a coach before? <span class="req">*</span></legend>
           <div class="chips">

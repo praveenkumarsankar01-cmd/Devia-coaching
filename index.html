@@ -15,6 +15,7 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
 <link rel="stylesheet" href="assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Devia Coaching","description":"1:1 career, leadership, business, health, finance and life coaching.","areaServed":"Worldwide (online)","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","addressCountry":"IN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"21:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"14:00"}]}</script>
@@ -66,6 +67,7 @@
         <li><a href="#coaching">Coaching</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#programs">Programs</a></li>
         <li><a href="#stories">Client stories</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -79,6 +81,7 @@
     <a href="#coaching">Coaching</a>
     <a href="#about">About</a>
     <a href="#how-it-works">How it works</a>
+    <a href="#programs">Programs</a>
     <a href="#stories">Client stories</a>
     <a href="#faq">FAQ</a>
     <a class="btn btn-gold btn-block" href="apply.html">Apply for a free strategy call</a>
@@ -89,14 +92,19 @@
 
   <!-- HERO -->
   <section class="hero" data-hero>
+    <div class="hero-media" aria-hidden="true">
+      <img src="https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" srcset="https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280 1280w, https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920 1920w" sizes="100vw" alt="" width="1920" height="1280" fetchpriority="high">
+      <!-- Optional background clip: put an .mp4 path in data-src and it plays muted over the photo. -->
+      <video muted loop playsinline preload="none" data-hero-video data-src=""></video>
+    </div>
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">1:1 coaching · Career · Business · Life</p>
+        <p class="eyebrow on-dark">1:1 coaching · Career · Business · Life</p>
         <h1>Your next chapter needs a <span class="hl">coach in your corner.</span></h1>
         <p class="lead">1:1 coaching for professionals, founders and leaders. Get a clear 90-day plan and the support to follow it.</p>
         <div class="hero-ctas">
           <a class="btn btn-gold btn-lg" href="apply.html">Apply for a free strategy call <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-ghost btn-lg" href="#about"><span class="play-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg></span> Watch: About Devia Coaching</a>
+          <a class="btn btn-outline-light btn-lg" href="#about"><span class="play-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg></span> Watch: About Devia Coaching</a>
         </div>
         <ul class="hero-assure">
           <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>45-minute call</li>
@@ -104,28 +112,7 @@
           <li><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>100% confidential</li>
         </ul>
       </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <div class="ring ring-a"></div>
-        <div class="ring ring-b"></div>
-        <div class="roadmap-card">
-          <div class="rc-head">
-            <span class="rc-icon"><svg class="ic"><use href="#i-map"/></svg></span>
-            <div>
-              <p class="rc-kicker">Your coaching roadmap</p>
-              <p class="rc-title">90-Day Career Reset</p>
-            </div>
-          </div>
-          <ol class="rc-phases">
-            <li class="done"><span class="rc-dot"><svg class="ic"><use href="#i-check"/></svg></span><div><strong>Clarity</strong><small>Weeks 1–2 · Values, strengths, direction</small><span class="bar"><i style="width:100%"></i></span></div></li>
-            <li class="active"><span class="rc-dot">2</span><div><strong>Action</strong><small>Weeks 3–8 · Positioning, outreach, interviews</small><span class="bar"><i style="width:62%"></i></span></div></li>
-            <li><span class="rc-dot">3</span><div><strong>Momentum</strong><small>Weeks 9–12 · Offer, negotiation, first 90 days</small><span class="bar"><i style="width:0"></i></span></div></li>
-          </ol>
-          <div class="rc-foot">
-            <span><svg class="ic"><use href="#i-video"/></svg>Next session</span>
-            <strong>Thu · 6:30 PM</strong>
-          </div>
-        </div>
+      <div class="hero-cards" aria-hidden="true">
         <div class="float-chip chip-booked">
           <span class="avatar av-gold">AK</span>
           <div><strong>Strategy call booked</strong><small>Career Coaching · 45 min</small></div>
@@ -142,10 +129,10 @@
   <!-- FACTS -->
   <section class="facts" aria-label="At a glance">
     <div class="wrap facts-grid">
-      <div class="fact"><strong>1:1</strong><span>Private sessions, never group calls</span></div>
-      <div class="fact"><strong>90 days</strong><span>Structured coaching cycles</span></div>
-      <div class="fact"><strong>6</strong><span>Coaching specialties</span></div>
+      <div class="fact"><strong>1:1</strong><span>Private sessions only</span></div>
+      <div class="fact"><strong>12</strong><span>Sessions in a 90-day program</span></div>
       <div class="fact"><strong>45 min</strong><span>Free strategy call to start</span></div>
+      <div class="fact"><strong>3</strong><span>Languages: English, Tamil, Hindi</span></div>
     </div>
   </section>
 
@@ -229,23 +216,49 @@
     </div>
   </section>
 
+  <!-- IN ACTION -->
+  <section class="section" id="sessions">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">How we work</p>
+        <h2>Real conversations. Real progress.</h2>
+        <p>Every session is a focused, honest conversation that ends with clear next steps.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g-item g-main reveal">
+          <img src="https://images.pexels.com/photos/5336987/pexels-photo-5336987.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/5336987/pexels-photo-5336987.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w, https://images.pexels.com/photos/5336987/pexels-photo-5336987.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=960 960w, https://images.pexels.com/photos/5336987/pexels-photo-5336987.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400 1400w" sizes="(max-width: 920px) 100vw, 60vw" alt="A coach and her client talking in armchairs during a 1:1 session" loading="lazy" decoding="async" width="1400" height="934">
+          <figcaption><strong>1:1 sessions</strong><span>Private, focused and judgement-free.</span></figcaption>
+        </figure>
+        <figure class="g-item reveal">
+          <img src="https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" srcset="https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=480 480w, https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=720 720w, https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000 1000w" sizes="(max-width: 920px) 100vw, 40vw" alt="A coach leading a small group workshop" loading="lazy" decoding="async" width="1000" height="667">
+          <figcaption><strong>Team workshops</strong><span>Part of the Leadership Program.</span></figcaption>
+        </figure>
+        <figure class="g-item reveal">
+          <img src="https://images.pexels.com/photos/5336958/pexels-photo-5336958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" srcset="https://images.pexels.com/photos/5336958/pexels-photo-5336958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=480 480w, https://images.pexels.com/photos/5336958/pexels-photo-5336958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=720 720w, https://images.pexels.com/photos/5336958/pexels-photo-5336958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000 1000w" sizes="(max-width: 920px) 100vw, 40vw" alt="A business coaching meeting in an office" loading="lazy" decoding="async" width="1000" height="667">
+          <figcaption><strong>Business coaching</strong><span>Strategy, pricing and focus.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT + VIDEO -->
   <section class="section" id="about">
     <div class="wrap about-grid">
       <div class="about-video reveal">
         <div class="video-frame">
-          <!-- To swap the video, change data-embed (Vimeo or YouTube embed URL) and the link below. -->
-          <button class="video-facade" type="button" data-video data-embed="https://player.vimeo.com/video/136645385?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1" aria-label="Play video: Devia Coaching | About">
+          <!-- To swap the video, change data-embed (TED, YouTube or Vimeo embed URL) and the credit below. -->
+          <button class="video-facade" type="button" data-video data-embed="https://embed.ted.com/talks/atul_gawande_want_to_get_great_at_something_get_a_coach" aria-label="Play video: Devia Coaching | About">
+            <img class="vf-img" src="https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=720 720w, https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 920px) 100vw, 55vw" alt="" loading="lazy" decoding="async">
             <span class="vf-pattern" aria-hidden="true"></span>
             <span class="vf-top" aria-hidden="true">
               <svg class="brand-mark sm" viewBox="0 0 40 40"><rect width="40" height="40" rx="11" fill="#fff"/><path d="M13 11h6.5a9 9 0 0 1 0 18H13z" fill="none" stroke="#2d3192" stroke-width="3.4" stroke-linejoin="round"/><path d="M24.5 14.5 31 8m-5 0h5v5" fill="none" stroke="#f8b629" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <span>Devia Coaching</span>
             </span>
             <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg></span>
-            <span class="vf-title" aria-hidden="true"><small>Watch</small>Devia Coaching | About</span>
+            <span class="vf-title" aria-hidden="true"><small>Watch · 16 min</small>Devia Coaching | About<em>Why everyone needs a coach</em></span>
           </button>
         </div>
-        <p class="video-note">Video: <em>What is coaching?</em> by the International Coaching Federation (ICF). <a href="https://coachingfederation.org/guide-to-experiencing-coaching-for-individuals/" target="_blank" rel="noopener">Read ICF's guide to experiencing coaching</a></p>
+        <p class="video-note">Featured talk: <em>Want to get great at something? Get a coach</em> by surgeon and writer Atul Gawande, TED 2017. It's the idea our coaching is built on.</p>
       </div>
 
       <div class="about-copy reveal">
@@ -295,20 +308,52 @@
     </div>
   </section>
 
-  <!-- WHAT'S INCLUDED -->
-  <section class="section" id="included">
+  <!-- PROGRAMS -->
+  <section class="section" id="programs">
     <div class="wrap">
       <div class="section-head center reveal">
-        <p class="eyebrow">Inside the program</p>
-        <h2>What you get</h2>
+        <p class="eyebrow">Programs</p>
+        <h2>Choose the support you need</h2>
+        <p>All programs are 1:1 and online. Fees are shared on your free call, once we know it's a fit.</p>
       </div>
-      <div class="included-grid">
-        <div class="inc reveal"><span class="inc-icon"><svg class="ic" aria-hidden="true"><use href="#i-video"/></svg></span><h3>1:1 sessions</h3><p>60-minute video calls, weekly or fortnightly, with one dedicated coach.</p></div>
-        <div class="inc reveal"><span class="inc-icon"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg></span><h3>90-day roadmap</h3><p>A written plan with clear milestones.</p></div>
-        <div class="inc reveal"><span class="inc-icon"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></span><h3>Chat support</h3><p>Message your coach Monday to Friday between sessions.</p></div>
-        <div class="inc reveal"><span class="inc-icon"><svg class="ic" aria-hidden="true"><use href="#i-tools"/></svg></span><h3>Tools you keep</h3><p>Strengths, values and decision exercises.</p></div>
-        <div class="inc reveal"><span class="inc-icon"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></span><h3>Progress reviews</h3><p>Check-ins at day 30, 60 and 90.</p></div>
-        <div class="inc reveal"><span class="inc-icon"><svg class="ic" aria-hidden="true"><use href="#i-notes"/></svg></span><h3>Session notes</h3><p>A short summary and action list after every call.</p></div>
+      <div class="programs">
+        <article class="program reveal">
+          <h3>Clarity Session</h3>
+          <p class="p-sub">One big decision, sorted.</p>
+          <p class="p-meta"><span><strong>1</strong> session</span><span><strong>90</strong> min</span></p>
+          <ul class="p-list">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Deep dive on one goal or decision</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Written action plan within 24 hours</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>7 days of chat follow-up</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="apply.html?program=clarity">Apply for this</a>
+        </article>
+        <article class="program featured reveal">
+          <span class="p-badge">Most chosen</span>
+          <h3>90-Day Coaching</h3>
+          <p class="p-sub">Real change, one week at a time.</p>
+          <p class="p-meta"><span><strong>12</strong> sessions</span><span><strong>60</strong> min</span><span>weekly</span></p>
+          <ul class="p-list">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Your written 90-day roadmap</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Chat support, Monday to Friday</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Progress reviews at day 30, 60 and 90</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Notes and actions after every session</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Strengths and values assessments</li>
+          </ul>
+          <a class="btn btn-gold btn-block" href="apply.html?program=90day">Apply for this</a>
+        </article>
+        <article class="program reveal">
+          <h3>Leadership Program</h3>
+          <p class="p-sub">For managers and founders.</p>
+          <p class="p-meta"><span><strong>6</strong> months</span><span><strong>18</strong> sessions</span></p>
+          <ul class="p-list">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>360° feedback from your team</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>2 team workshops, online or on-site</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Priority chat support</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Quarterly goal reviews</li>
+          </ul>
+          <a class="btn btn-ghost btn-block" href="apply.html?program=leadership">Apply for this</a>
+        </article>
       </div>
     </div>
   </section>
@@ -400,7 +445,7 @@
         </details>
         <details>
           <summary>How long is a program?</summary>
-          <p>Programs run in 90-day cycles. Most clients stay for one or two cycles, meeting weekly or fortnightly.</p>
+          <p>A Clarity Session is a single 90-minute call. 90-Day Coaching is 12 weekly sessions. The Leadership Program runs for 6 months with 18 sessions.</p>
         </details>
         <details>
           <summary>How much does it cost?</summary>
@@ -408,7 +453,7 @@
         </details>
         <details>
           <summary>Are sessions online?</summary>
-          <p>Yes, on Zoom or Google Meet. The booking calendar shows times in your own time zone.</p>
+          <p>Yes, on Zoom or Google Meet, in English, Tamil or Hindi. The booking calendar shows times in your own time zone.</p>
         </details>
         <details>
           <summary>Is what I share confidential?</summary>
@@ -424,6 +469,7 @@
 
   <!-- FINAL CTA -->
   <section class="cta-band">
+    <img class="cta-bg" src="https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" srcset="https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280 1280w, https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920 1920w" sizes="100vw" alt="" loading="lazy" decoding="async">
     <div class="wrap cta-in reveal">
       <div>
         <h2>Ready to start?</h2>
@@ -460,6 +506,7 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#programs">Programs</a></li>
         <li><a href="#stories">Client stories</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="apply.html">Apply</a></li>
