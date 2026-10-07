@@ -135,24 +135,14 @@
       });
     });
 
-    var items = $$('.reveal');
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
-        });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-      items.forEach(function (el) { io.observe(el); });
-
-      var bar = $('[data-mobile-cta]');
-      var hero = $('[data-hero]');
-      var band = $('.cta-band');
+    var bar = $('[data-mobile-cta]');
+    var hero = $('[data-hero]');
+    var band = $('.cta-band');
+    if (bar && hero && band && 'IntersectionObserver' in window) {
       var heroOut = false, bandIn = false;
       var update = function () { bar.classList.toggle('show', heroOut && !bandIn); };
       new IntersectionObserver(function (e) { heroOut = !e[0].isIntersecting; update(); }).observe(hero);
       new IntersectionObserver(function (e) { bandIn = e[0].isIntersecting; update(); }).observe(band);
-    } else {
-      items.forEach(function (el) { el.classList.add('in'); });
     }
   }
 
