@@ -51,7 +51,7 @@
 
 <div class="topbar">
   <div class="wrap topbar-in">
-    <p><span class="dot" aria-hidden="true"></span>Now taking applications for the <strong data-intake-month>next</strong> intake. Limited 1:1 spots.</p>
+    <p><span class="dot" aria-hidden="true"></span>Now taking applications for the <strong data-intake-month>next</strong> intake.<span class="tb-extra"> Limited 1:1 spots.</span></p>
     <a href="apply.html">Apply now <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </div>
 </div>
@@ -99,7 +99,7 @@
         <p class="lead">1:1 coaching for professionals, founders and leaders. Get a clear 90-day plan and the support to follow it.</p>
         <div class="hero-ctas">
           <a class="btn btn-gold btn-lg" href="apply.html">Apply for a free strategy call <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-outline-light btn-lg" href="#about"><span class="play-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg></span> Watch: About Devia Coaching</a>
+          <a class="btn btn-outline-light btn-lg" href="#about"><span class="play-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg></span> <span class="t-desk">Watch: About Devia Coaching</span><span class="ph-only t-phone">Watch the video</span></a>
         </div>
       </div>
     </div>
@@ -137,6 +137,7 @@
         <li>"My health and money keep waiting for next quarter."</li>
         <li>"I've read the books. None of it stuck."</li>
       </ul>
+      <button class="ph-only familiar-more" type="button" aria-expanded="false" data-familiar-more><span>Show all 6</span></button>
       <div class="familiar-answer">
         <p>You don't need more information. You need a plan, and someone to keep you on it. That's coaching.</p>
         <a href="apply.html">Talk to a coach <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -168,6 +169,7 @@
         <p class="eyebrow">About Devia Coaching</p>
         <h2>Clear thinking. A real plan. Someone in your corner.</h2>
         <p>You already know more than you think. What's missing is time to think, a plan you trust, and support when motivation drops.</p>
+        <div class="about-more" id="about-more">
         <p>We follow the ICF definition of coaching: <em>"partnering with clients in a thought-provoking and creative process that inspires them to maximize their personal and professional potential."</em> Then we add structure: a 90-day plan, weekly actions and regular reviews.</p>
         <ul class="ticks">
           <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Confidential.</strong> What you share stays with your coach.</span></li>
@@ -175,6 +177,9 @@
           <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Accountable.</strong> Weekly actions and 30/60/90-day reviews.</span></li>
           <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Online.</strong> Zoom or Google Meet, from anywhere.</span></li>
         </ul>
+        <p class="video-note ph-only">Featured talk: <em>Want to get great at something? Get a coach</em> by Atul Gawande, TED 2017. <a href="https://www.ted.com/talks/atul_gawande_want_to_get_great_at_something_get_a_coach" target="_blank" rel="noopener">Watch on TED</a></p>
+        </div>
+        <button class="ph-only about-more-btn" type="button" aria-expanded="false" aria-controls="about-more" data-about-more><span>Read more</span></button>
       </div>
     </div>
   </section>
@@ -187,7 +192,7 @@
         <p>Six ways we can help. Not sure which one fits? Pick the closest. We'll sort it out on your call.</p>
       </div>
 
-      <div class="coach-grid">
+      <div class="coach-grid" data-swipe>
         <a class="coach-card" href="apply.html?focus=career">
           <span class="coach-icon"><svg class="ic-lg" aria-hidden="true"><use href="#i-career"/></svg></span>
           <span class="coach-body">
@@ -248,7 +253,7 @@
         <h2>Real conversations. Real progress.</h2>
         <p>Every session is a focused, honest conversation that ends with clear next steps.</p>
       </div>
-      <div class="gallery">
+      <div class="gallery" data-swipe>
         <figure class="g-item g-main">
           <img src="https://images.pexels.com/photos/5336987/pexels-photo-5336987.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/5336987/pexels-photo-5336987.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640 640w, https://images.pexels.com/photos/5336987/pexels-photo-5336987.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=960 960w, https://images.pexels.com/photos/5336987/pexels-photo-5336987.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400 1400w" sizes="(max-width: 920px) 100vw, 60vw" alt="A coach and her client talking in armchairs during a 1:1 session" loading="lazy" decoding="async" width="1400" height="934">
           <figcaption><strong>1:1 sessions</strong><span>Private, focused and judgement-free.</span></figcaption>
@@ -305,7 +310,7 @@
         <h2>Choose the support you need</h2>
         <p>All programs are 1:1 and online. Fees are shared on your free call, once we know it's a fit.</p>
       </div>
-      <div class="programs">
+      <div class="programs" data-swipe>
         <article class="program">
           <h3>Clarity Session</h3>
           <p class="p-sub">One big decision, sorted.</p>
@@ -355,24 +360,24 @@
         <h2>Is this right for you?</h2>
       </div>
       <div class="fit-grid">
-        <div class="fit-card yes">
-          <h3><span class="fit-badge"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Yes, if you…</h3>
+        <details class="fit-card yes" open>
+          <summary><h3><span class="fit-badge"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Yes, if you…</h3></summary>
           <ul>
             <li>Are ready to own your growth</li>
             <li>Can give 1–2 hours a week</li>
             <li>Are open to honest feedback</li>
             <li>Want a plan, not just motivation</li>
           </ul>
-        </div>
-        <div class="fit-card no">
-          <h3><span class="fit-badge"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></span>Not yet, if you…</h3>
+        </details>
+        <details class="fit-card no" open>
+          <summary><h3><span class="fit-badge"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></span>Not yet, if you…</h3></summary>
           <ul>
             <li>Want a quick fix or a guaranteed result</li>
             <li>Want someone else to do the work</li>
             <li>Can't commit time for the next 90 days</li>
             <li>Need therapy or medical support (we'll refer you)</li>
           </ul>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -383,7 +388,7 @@
       <div class="section-head center">
         <h2>What clients say</h2>
       </div>
-      <div class="rv-grid">
+      <div class="rv-grid" data-swipe>
         <article class="rv">
           <header class="rv-top">
             <span class="r-avatar r1" aria-hidden="true">A</span>
@@ -529,7 +534,8 @@
 </footer>
 
 <div class="mobile-cta" data-mobile-cta>
-  <a class="btn btn-gold btn-block" href="apply.html">Apply for a free strategy call <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <p class="mc-text"><strong>Free 45-min strategy call</strong><span>No cost, no obligation</span></p>
+  <a class="btn btn-gold" href="apply.html">Apply now <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
 </div>
 
 <script src="assets/site.js" defer></script>

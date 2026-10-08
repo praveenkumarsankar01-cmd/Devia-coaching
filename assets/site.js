@@ -145,6 +145,74 @@
       new IntersectionObserver(function (e) { heroOut = !e[0].isIntersecting; update(); }).observe(hero);
       new IntersectionObserver(function (e) { bandIn = e[0].isIntersecting; update(); }).observe(band);
     }
+
+    initPhone();
+  }
+
+  /* ---------- phone layout ---------- */
+
+  function initPhone() {
+    var phone = window.matchMedia('(max-width: 640px)');
+    var arrow = '<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>';
+
+    // Swipe rows: counter, progress line and prev/next buttons under each row.
+    $$('[data-swipe]').forEach(function (row) {
+      var items = row.children, n = items.length;
+      var meta = document.createElement('div');
+      meta.className = 'swipe-meta';
+      meta.innerHTML = '<span class="swipe-count" aria-live="polite"><b>1</b> / ' + n + '</span>' +
+        '<span class="swipe-track" aria-hidden="true"><i></i></span>' +
+        '<span class="swipe-btns"><button type="button" class="swipe-btn prev" aria-label="Previous">' + arrow + '</button>' +
+        '<button type="button" class="swipe-btn next" aria-label="Next">' + arrow + '</button></span>';
+      row.parentNode.insertBefore(meta, row.nextSibling);
+
+      var cur = $('b', meta), bar = $('.swipe-track i', meta);
+      var prev = $('.prev', meta), next = $('.next', meta);
+      bar.style.width = (100 / n) + '%';
+
+      var step = function () {
+        var gap = parseFloat(getComputedStyle(row).columnGap) || 0;
+        return items[0].getBoundingClientRect().width + gap;
+      };
+      var index = function () {
+        var max = row.scrollWidth - row.clientWidth;
+        if (max > 0 && row.scrollLeft >= max - 4) return n - 1;
+        return Math.max(0, Math.min(n - 1, Math.round(row.scrollLeft / step())));
+      };
+      var update = function () {
+        var i = index();
+        cur.textContent = i + 1;
+        bar.style.transform = 'translateX(' + (i * 100) + '%)';
+        prev.disabled = i === 0;
+        next.disabled = i === n - 1;
+      };
+      var raf;
+      row.addEventListener('scroll', function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(update); }, { passive: true });
+      prev.addEventListener('click', function () { row.scrollBy({ left: -step(), behavior: 'smooth' }); });
+      next.addEventListener('click', function () { row.scrollBy({ left: step(), behavior: 'smooth' }); });
+      update();
+    });
+
+    // "Show all 6" and "Read more" toggles.
+    var toggle = function (btn, box, on, off) {
+      if (!btn || !box) return;
+      btn.addEventListener('click', function () {
+        var open = box.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', String(open));
+        btn.firstElementChild.textContent = open ? on : off;
+      });
+    };
+    toggle($('[data-familiar-more]'), $('.familiar-list'), 'Show fewer', 'Show all 6');
+    toggle($('[data-about-more]'), $('.about-copy'), 'Read less', 'Read more');
+
+    // Good fit: collapsible on phone, always open on larger screens.
+    var fits = $$('.fit-card');
+    var syncFit = function () { fits.forEach(function (d) { d.open = !phone.matches; }); };
+    fits.forEach(function (d) {
+      $('summary', d).addEventListener('click', function (e) { if (!phone.matches) e.preventDefault(); });
+    });
+    syncFit();
+    if (phone.addEventListener) phone.addEventListener('change', syncFit);
   }
 
   /* ---------- form helpers ---------- */
