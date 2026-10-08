@@ -64,8 +64,8 @@
     </a>
     <nav class="nav-main" aria-label="Main" data-nav>
       <ul>
-        <li><a href="#coaching">Coaching</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#coaching">Coaching</a></li>
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#programs">Programs</a></li>
         <li><a href="#stories">Reviews</a></li>
@@ -78,8 +78,8 @@
     </button>
   </div>
   <div class="mobile-nav" id="mobile-nav" hidden data-mobile-nav>
-    <a href="#coaching">Coaching</a>
     <a href="#about">About</a>
+    <a href="#coaching">Coaching</a>
     <a href="#how-it-works">How it works</a>
     <a href="#programs">Programs</a>
     <a href="#stories">Reviews</a>
@@ -92,13 +92,8 @@
 
   <!-- HERO -->
   <section class="hero" data-hero>
-    <div class="hero-media" aria-hidden="true">
-      <img src="https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" srcset="https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280 1280w, https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920 1920w" sizes="100vw" alt="" width="1920" height="1280" fetchpriority="high">
-      <!-- Optional background clip: put an .mp4 path in data-src and it plays muted over the photo. -->
-      <video muted loop playsinline preload="none" data-hero-video data-src=""></video>
-    </div>
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
+    <div class="hero-band">
+      <div class="wrap hero-copy">
         <p class="eyebrow on-dark">1:1 coaching · Career · Business · Life</p>
         <h1>Your next chapter needs a <span class="hl">coach in your corner.</span></h1>
         <p class="lead">1:1 coaching for professionals, founders and leaders. Get a clear 90-day plan and the support to follow it.</p>
@@ -106,11 +101,13 @@
           <a class="btn btn-gold btn-lg" href="apply.html">Apply for a free strategy call <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-outline-light btn-lg" href="#about"><span class="play-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg></span> Watch: About Devia Coaching</a>
         </div>
-        <ul class="hero-assure">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>45-minute call</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Free, no obligation</li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg>100% confidential</li>
-        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="hero-photo">
+        <img src="https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" srcset="https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800 800w, https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280 1280w, https://images.pexels.com/photos/6135180/pexels-photo-6135180.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920 1920w" sizes="(max-width: 1180px) 100vw, 1132px" alt="Two women talking on a sofa during a coaching conversation" width="1920" height="1280" fetchpriority="high">
+        <!-- Optional clip: put an .mp4 path in data-src and it plays muted over the photo. -->
+        <video muted loop playsinline preload="none" data-hero-video data-src=""></video>
       </div>
     </div>
   </section>
@@ -147,8 +144,43 @@
     </div>
   </section>
 
+  <!-- ABOUT + VIDEO -->
+  <section class="section section-tint" id="about">
+    <div class="wrap about-grid">
+      <div class="about-video">
+        <div class="video-frame">
+          <!-- To swap the video, change data-embed (YouTube or Vimeo embed URL) and the credit below. -->
+          <button class="video-facade" type="button" data-video data-embed="https://www.youtube-nocookie.com/embed/Ce72-pzmzcA?autoplay=1&amp;rel=0&amp;playsinline=1" aria-label="Play video: Devia Coaching | About">
+            <img class="vf-img" src="https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=720 720w, https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 920px) 100vw, 55vw" alt="" loading="lazy" decoding="async">
+            <span class="vf-pattern" aria-hidden="true"></span>
+            <span class="vf-top" aria-hidden="true">
+              <svg class="brand-mark sm" viewBox="0 0 40 40"><rect width="40" height="40" rx="11" fill="#fff"/><path d="M13 11h6.5a9 9 0 0 1 0 18H13z" fill="none" stroke="#2d3192" stroke-width="3.4" stroke-linejoin="round"/><path d="M24.5 14.5 31 8m-5 0h5v5" fill="none" stroke="#f8b629" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Devia Coaching</span>
+            </span>
+            <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg></span>
+            <span class="vf-title" aria-hidden="true"><small>Watch · 16 min</small>Devia Coaching | About<em>Why everyone needs a coach</em></span>
+          </button>
+        </div>
+        <p class="video-note">Featured talk: <em>Want to get great at something? Get a coach</em> by Atul Gawande, TED 2017. <a href="https://www.ted.com/talks/atul_gawande_want_to_get_great_at_something_get_a_coach" target="_blank" rel="noopener">Watch on TED</a></p>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow">About Devia Coaching</p>
+        <h2>Clear thinking. A real plan. Someone in your corner.</h2>
+        <p>You already know more than you think. What's missing is time to think, a plan you trust, and support when motivation drops.</p>
+        <p>We follow the ICF definition of coaching: <em>"partnering with clients in a thought-provoking and creative process that inspires them to maximize their personal and professional potential."</em> Then we add structure: a 90-day plan, weekly actions and regular reviews.</p>
+        <ul class="ticks">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Confidential.</strong> What you share stays with your coach.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Structured.</strong> A clear framework built around your goals.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Accountable.</strong> Weekly actions and 30/60/90-day reviews.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Online.</strong> Zoom or Google Meet, from anywhere.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- TYPES OF COACHING -->
-  <section class="section section-tint" id="coaching">
+  <section class="section" id="coaching">
     <div class="wrap">
       <div class="types-head">
         <h2 class="bar-title">Types of Coaching:</h2>
@@ -209,7 +241,7 @@
   </section>
 
   <!-- IN ACTION -->
-  <section class="section" id="sessions">
+  <section class="section section-tint" id="sessions">
     <div class="wrap">
       <div class="section-head center">
         <p class="eyebrow">How we work</p>
@@ -229,41 +261,6 @@
           <img src="https://images.pexels.com/photos/5336958/pexels-photo-5336958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" srcset="https://images.pexels.com/photos/5336958/pexels-photo-5336958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=480 480w, https://images.pexels.com/photos/5336958/pexels-photo-5336958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=720 720w, https://images.pexels.com/photos/5336958/pexels-photo-5336958.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1000 1000w" sizes="(max-width: 920px) 100vw, 40vw" alt="A business coaching meeting in an office" loading="lazy" decoding="async" width="1000" height="667">
           <figcaption><strong>Business coaching</strong><span>Strategy, pricing and focus.</span></figcaption>
         </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT + VIDEO -->
-  <section class="section" id="about">
-    <div class="wrap about-grid">
-      <div class="about-video">
-        <div class="video-frame">
-          <!-- To swap the video, change data-embed (YouTube or Vimeo embed URL) and the credit below. -->
-          <button class="video-facade" type="button" data-video data-embed="https://www.youtube-nocookie.com/embed/Ce72-pzmzcA?autoplay=1&amp;rel=0&amp;playsinline=1" aria-label="Play video: Devia Coaching | About">
-            <img class="vf-img" src="https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" srcset="https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=720 720w, https://images.pexels.com/photos/7176305/pexels-photo-7176305.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200 1200w" sizes="(max-width: 920px) 100vw, 55vw" alt="" loading="lazy" decoding="async">
-            <span class="vf-pattern" aria-hidden="true"></span>
-            <span class="vf-top" aria-hidden="true">
-              <svg class="brand-mark sm" viewBox="0 0 40 40"><rect width="40" height="40" rx="11" fill="#fff"/><path d="M13 11h6.5a9 9 0 0 1 0 18H13z" fill="none" stroke="#2d3192" stroke-width="3.4" stroke-linejoin="round"/><path d="M24.5 14.5 31 8m-5 0h5v5" fill="none" stroke="#f8b629" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>Devia Coaching</span>
-            </span>
-            <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="currentColor"/></svg></span>
-            <span class="vf-title" aria-hidden="true"><small>Watch · 16 min</small>Devia Coaching | About<em>Why everyone needs a coach</em></span>
-          </button>
-        </div>
-        <p class="video-note">Featured talk: <em>Want to get great at something? Get a coach</em> by Atul Gawande, TED 2017. <a href="https://www.ted.com/talks/atul_gawande_want_to_get_great_at_something_get_a_coach" target="_blank" rel="noopener">Watch on TED</a></p>
-      </div>
-
-      <div class="about-copy">
-        <p class="eyebrow">About Devia Coaching</p>
-        <h2>Clear thinking. A real plan. Someone in your corner.</h2>
-        <p>You already know more than you think. What's missing is time to think, a plan you trust, and support when motivation drops.</p>
-        <p>We follow the ICF definition of coaching: <em>"partnering with clients in a thought-provoking and creative process that inspires them to maximize their personal and professional potential."</em> Then we add structure: a 90-day plan, weekly actions and regular reviews.</p>
-        <ul class="ticks">
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Confidential.</strong> What you share stays with your coach.</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Structured.</strong> A clear framework built around your goals.</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Accountable.</strong> Weekly actions and 30/60/90-day reviews.</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Online.</strong> Zoom or Google Meet, from anywhere.</span></li>
-        </ul>
       </div>
     </div>
   </section>

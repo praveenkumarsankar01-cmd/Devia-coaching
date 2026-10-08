@@ -129,21 +129,17 @@ strong { color: var(--ink); font-weight: 600; }
 .eyebrow.on-dark { color: var(--gold); }
 
 /* hero */
-.hero { position: relative; overflow: hidden; padding: 112px 0 128px; background: var(--navy-900); color: #dfe1fb; isolation: isolate; }
-.hero-media { position: absolute; inset: 0; z-index: -2; }
-.hero-media img, .hero-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 40%; }
-.hero-media video { opacity: 0; transition: opacity .8s; }
-.hero-media video.playing { opacity: 1; }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(20, 22, 90, .97) 0%, rgba(20, 22, 90, .9) 36%, rgba(30, 33, 114, .55) 62%, rgba(30, 33, 114, .12) 100%); }
-.hero-grid { display: block; }
-.hero-copy { max-width: 620px; }
-.hero h1 { color: #fff; font-size: clamp(36px, 5vw, 58px); font-weight: 800; line-height: 1.08; letter-spacing: -.025em; margin-bottom: 20px; }
+.hero { position: relative; padding-bottom: 64px; background: #fff; color: #dfe1fb; }
+.hero-band { padding: 72px 0 230px; background: var(--navy-900); text-align: center; }
+.hero-copy { max-width: 880px; }
+.hero h1 { color: #fff; font-size: clamp(34px, 4.4vw, 56px); font-weight: 800; line-height: 1.1; letter-spacing: -.025em; margin-bottom: 18px; }
 .hl { color: var(--gold); }
-.lead { font-size: 19px; max-width: 540px; color: #dfe1fb; }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin: 32px 0 26px; }
-.hero-assure { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 14px; color: #c9cbf0; }
-.hero-assure li { display: inline-flex; align-items: center; gap: 8px; }
-.hero-assure .ic { width: 18px; height: 18px; color: var(--gold); }
+.lead { font-size: 19px; max-width: 560px; margin-left: auto; margin-right: auto; color: #dfe1fb; }
+.hero-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 30px 0 0; }
+.hero-photo { position: relative; height: 480px; margin-top: -190px; overflow: hidden; background: var(--navy-800); border-top: 6px solid var(--gold); box-shadow: 0 24px 60px rgba(20, 22, 90, .22); }
+.hero-photo img, .hero-photo video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+.hero-photo video { opacity: 0; transition: opacity .8s; }
+.hero-photo video.playing { opacity: 1; }
 .btn-outline-light { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .45); }
 .btn-outline-light:hover { color: #fff; border-color: #fff; background: rgba(255, 255, 255, .12); }
 .btn-outline-light:hover .ic { transform: none; }
@@ -548,12 +544,8 @@ strong { color: var(--ink); font-weight: 600; }
   :root { --header-h: 64px; }
   .nav-main { display: none; }
   .nav-toggle { display: grid; }
-  .hero { padding: 0 0 64px; }
-  .hero::before { display: none; }
-  .hero-media { position: relative; z-index: 0; height: clamp(260px, 52vw, 420px); margin-bottom: -40px; }
-  .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20, 22, 90, .05) 30%, rgba(20, 22, 90, .6) 70%, var(--navy-900) 100%); }
-  .hero-grid { position: relative; z-index: 1; }
-  .hero-grid { grid-template-columns: 1fr; }
+  .hero-band { padding: 56px 0 170px; }
+  .hero-photo { height: 380px; margin-top: -140px; }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 340px 240px; height: auto; }
   .g-main { grid-row: auto; grid-column: 1 / -1; }
   .programs { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
@@ -587,6 +579,9 @@ strong { color: var(--ink); font-weight: 600; }
   .section-head { margin-bottom: 32px; }
   .lead { font-size: 17px; }
   .hero-ctas .btn { width: 100%; }
+  .hero { padding-bottom: 40px; }
+  .hero-band { padding: 44px 0 120px; }
+  .hero-photo { height: 240px; margin-top: -96px; }
   .gallery { grid-template-columns: 1fr; grid-template-rows: 300px 220px 220px; }
   .g-item figcaption { left: 18px; bottom: 16px; }
   .eyebrow { font-size: 12px; letter-spacing: .03em; }
