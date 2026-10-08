@@ -128,7 +128,8 @@
         var frame = document.createElement('iframe');
         frame.src = btn.getAttribute('data-embed');
         frame.title = 'Devia Coaching | About';
-        frame.allow = 'autoplay; fullscreen; picture-in-picture';
+        frame.allow = 'accelerometer; autoplay; encrypted-media; fullscreen; gyroscope; picture-in-picture';
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';
         frame.setAttribute('allowfullscreen', '');
         btn.parentNode.replaceChild(frame, btn);
         frame.focus();
